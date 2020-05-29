@@ -1,17 +1,19 @@
 import React from 'react';
-import './App.css';
 
 // Components
 
 import TodoList from './TodoList';
+import Container from './Container';
 
 function App() {
   return (
     <div className="todo-mvc">
-      <header className="header">
-        <h1>Welcome to TodoReact</h1>
+      <header className="header p-8 bg-purple-600 text-white mb-8">
+        <Container children={
+          <h1 className="text-3xl">Welcome to TodoReact</h1>
+        } />
       </header>
-      <TodoList />
+      <Container children={<TodoList />} />
     </div>
   );
 }
